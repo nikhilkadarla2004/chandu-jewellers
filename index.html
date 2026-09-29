@@ -2,63 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chandu Jewellers | Karimnagar – Pure Gold & Diamond Jewellery</title>
-  <meta name="description" content="Chandu Jewellers, Karimnagar – Explore rings, chains, necklaces, harams, bangles, mangalsutras and more. Trusted jewellery since 1996.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Chandu Jewellers, Karimnagar | Gold, Diamond & Bridal Jewellery Since 1996</title>
+  <meta name="description" content="Chandu Jewellers, Karimnagar — BIS-hallmarked gold, certified diamonds and bridal jewellery since 1996. Browse rings, earrings, necklaces, chains, bangles and more, check today's gold rate, and book a store visit on WhatsApp.">
+  <meta name="theme-color" content="#3a0f18">
+  <!-- TODO after hosting: replace https://chandujewellers.in with the real address -->
+  <link rel="canonical" href="https://chandujewellers.in/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Chandu Jewellers">
+  <meta property="og:title" content="Chandu Jewellers, Karimnagar — Trusted since 1996">
+  <meta property="og:description" content="Hallmarked gold, certified diamonds and bridal sets. Visit our Karimnagar store or chat with us on WhatsApp.">
+  <meta property="og:image" content="https://chandujewellers.in/images/og-image.jpg">
+  <meta property="og:url" content="https://chandujewellers.in/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icon-32.png">
+  <link rel="apple-touch-icon" href="images/icon-180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
+  <link rel="preload" as="image" href="images/hero/hero-1-sm.webp" media="(max-width: 960px)">
+  <link rel="preload" as="image" href="images/hero/hero-1.webp" media="(min-width: 961px)">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/features.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "JewelryStore",
+    "name": "Chandu Jewellers",
+    "image": "https://chandujewellers.in/images/og-image.jpg",
+    "logo": "https://chandujewellers.in/images/icon-512.png",
+    "url": "https://chandujewellers.in/",
+    "telephone": "+91-79812-33951",
+    "foundingDate": "1996",
+    "priceRange": "₹₹",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Karimnagar",
+      "addressRegion": "Telangana",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://instagram.com/chandujewellers1996",
+      "https://www.facebook.com/profile.php?id=chandujewellery"
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- Page loader -->
-  <div class="page-loader" id="pageLoader">
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
     <div class="loader-content">
       <span class="loader-brand">Chandu Jewellers</span>
       <div class="loader-bar"><div class="loader-progress"></div></div>
     </div>
   </div>
-  <!-- Promo strip (above everything) -->
+
+  <!-- Promo strip -->
   <div class="promo-strip">
     <div class="container promo-inner">
-      <span class="promo-text">✨ Unlock Joy this Wedding Season – Exclusive Bridal Collection Now in Store</span>
-      <a href="#explore" class="promo-cta">Discover Now</a>
+      <span class="promo-text">✨ Wedding season is here — book a private bridal consultation at our Karimnagar store</span>
+      <a href="#appointment" class="promo-cta">Book a Visit</a>
     </div>
   </div>
 
   <!-- Top bar -->
   <header class="top-bar">
     <div class="container top-bar-inner">
-      <p class="location" data-reveal>📍 Karimnagar – Visit our store</p>
-      <p class="tagline">Trusted since 1996 • Pure gold & certified diamonds</p>
-      <p class="contact">📞 79812 33951</p>
+      <p class="location">📍 <span data-store="city">Karimnagar</span> · Visit our store</p>
+      <p class="tagline rate-mini" id="rateMini">Trusted since 1996 · Hallmarked gold &amp; certified diamonds</p>
+      <p class="contact"><a href="tel:+917981233951" data-tel>📞 79812 33951</a></p>
     </div>
   </header>
 
   <!-- Main nav -->
-  <nav class="main-nav">
+  <nav class="main-nav" aria-label="Main">
     <div class="container nav-inner">
-      <a href="#" class="logo"><img src="images/logo.jpeg" alt="Chandu Jewellers Logo" class="logo-img"></a>
-      <ul class="nav-links">
+      <a href="#home" class="logo" aria-label="Chandu Jewellers — home"><img src="images/icon-192.png" alt="Chandu Jewellers" class="logo-img" width="56" height="56"></a>
+      <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
-        <li><a href="#featured">Featured</a></li>
-        <li><a href="#explore">Explore Jewellery</a></li>
-        <li><a href="#categories">Shop by Category</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#explore">Collection</a></li>
+        <li><a href="#rates">Gold Rate</a></li>
+        <li><a href="#appointment">Book a Visit</a></li>
+        <li><a href="#guide">Gold Guide</a></li>
+        <li><a href="#visit">Store</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-actions">
+        <button class="icon-btn" id="openSearch" aria-label="Search jewellery">
+          <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+        <button class="icon-btn" id="openWishlist" aria-label="Open wishlist">
+          <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.2 3 4.5 6.6 4.5c2.1 0 3.5 1.2 4.4 2.6.9-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.7 3.8 6.9C19 15.6 12 20 12 20z"/></svg>
+          <span class="badge" id="wishCount" hidden>0</span>
+        </button>
+        <button class="nav-toggle" aria-label="Menu" aria-controls="navLinks" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
-  <!-- Hero – cinematic carousel (Joyalukkas inspired) -->
-  <section id="home" class="hero-cinema">
+  <main id="main">
+  <!-- Hero -->
+  <section id="home" class="hero-cinema" aria-roledescription="carousel" aria-label="Highlights">
     <div class="hero-slides">
-      <!-- 1. Product close-up — opening -->
-      <div class="hero-slide active" style="background-image: url('images/hero/hero-1.jpg');">
+      <div class="hero-slide active" data-bg="images/hero/hero-1">
         <div class="hero-slide-overlay"></div>
         <div class="hero-slide-content">
           <span class="hero-brand-mark">Chandu Jewellers</span>
@@ -67,48 +120,45 @@
           <p class="hero-tagline">Heirloom jewellery crafted for the timeless moments of your life.</p>
           <div class="hero-actions">
             <a href="#explore" class="btn-cinema btn-cinema-primary">Explore Collection</a>
-            <a href="#categories" class="btn-cinema btn-cinema-ghost">Shop by Category</a>
+            <a href="#appointment" class="btn-cinema btn-cinema-ghost">Book a Visit</a>
           </div>
         </div>
       </div>
 
-      <!-- 2. Bride portrait -->
-      <div class="hero-slide" style="background-image: url('images/bride/bride-1.jpg');">
+      <div class="hero-slide bride" data-bg="images/bride/bride-1">
         <div class="hero-slide-overlay"></div>
         <div class="hero-slide-content hero-slide-content-right">
           <span class="hero-brand-mark">The Bridal Story</span>
           <p class="hero-eyebrow">Adorned in Heritage</p>
-          <h1 class="hero-title">Every Bride. <em>Her Story.</em></h1>
+          <h2 class="hero-title">Every Bride. <em>Her Story.</em></h2>
           <p class="hero-tagline">From the maang tikka to the mangalsutra — each piece tells a story written in gold.</p>
           <div class="hero-actions">
-            <a href="#explore" class="btn-cinema btn-cinema-primary">View Bridal Edit</a>
-            <a href="#contact" class="btn-cinema btn-cinema-ghost">Book Appointment</a>
+            <a href="#appointment" class="btn-cinema btn-cinema-primary">Book Bridal Consultation</a>
+            <a href="#explore" class="btn-cinema btn-cinema-ghost">View Collection</a>
           </div>
         </div>
       </div>
 
-      <!-- 3. Product — bridal jewellery -->
-      <div class="hero-slide" style="background-image: url('images/hero/hero-2.jpg');">
+      <div class="hero-slide" data-bg="images/hero/hero-2">
         <div class="hero-slide-overlay"></div>
         <div class="hero-slide-content">
           <span class="hero-brand-mark">Chandu Jewellers</span>
-          <p class="hero-eyebrow">Bridal Edit · 2026</p>
-          <h1 class="hero-title">A Wedding <em>Dream</em></h1>
-          <p class="hero-tagline">Exquisite bridal sets, harams and mangalsutras — for the day you've always imagined.</p>
+          <p class="hero-eyebrow">Today's Gold Rate</p>
+          <h2 class="hero-title">Know the <em>Price</em></h2>
+          <p class="hero-tagline">Check today's rate and estimate any piece — gold value, making charges and GST, all laid out.</p>
           <div class="hero-actions">
-            <a href="#explore" class="btn-cinema btn-cinema-primary">View Bridal Collection</a>
-            <a href="#contact" class="btn-cinema btn-cinema-ghost">Book Appointment</a>
+            <a href="#rates" class="btn-cinema btn-cinema-primary">Price Estimator</a>
+            <a href="#guide" class="btn-cinema btn-cinema-ghost">How Pricing Works</a>
           </div>
         </div>
       </div>
 
-      <!-- 4. Bride portrait -->
-      <div class="hero-slide" style="background-image: url('images/bride/bride-2.jpg');">
+      <div class="hero-slide bride" data-bg="images/bride/bride-2">
         <div class="hero-slide-overlay"></div>
         <div class="hero-slide-content hero-slide-content-right">
           <span class="hero-brand-mark">The Moment</span>
           <p class="hero-eyebrow">When She Says Yes</p>
-          <h1 class="hero-title">Worn With <em>Grace</em></h1>
+          <h2 class="hero-title">Worn With <em>Grace</em></h2>
           <p class="hero-tagline">Crafted to honour tradition, designed to celebrate her. Bridal sets that become heirlooms.</p>
           <div class="hero-actions">
             <a href="#explore" class="btn-cinema btn-cinema-primary">Explore the Edit</a>
@@ -117,123 +167,115 @@
         </div>
       </div>
 
-      <!-- 5. Diamond product -->
-      <div class="hero-slide" style="background-image: url('images/hero/hero-3.jpg');">
+      <div class="hero-slide" data-bg="images/hero/hero-3">
         <div class="hero-slide-overlay"></div>
         <div class="hero-slide-content">
           <span class="hero-brand-mark">Chandu Jewellers</span>
           <p class="hero-eyebrow">Diamond Atelier</p>
-          <h1 class="hero-title">Brilliance <em>Eternal</em></h1>
+          <h2 class="hero-title">Brilliance <em>Eternal</em></h2>
           <p class="hero-tagline">Certified diamonds, expertly set in 18kt gold — radiance you can wear every day.</p>
           <div class="hero-actions">
             <a href="#explore" class="btn-cinema btn-cinema-primary">Discover Diamonds</a>
-            <a href="#about" class="btn-cinema btn-cinema-ghost">Our Story</a>
+            <a href="#guide" class="btn-cinema btn-cinema-ghost">Diamond Guide</a>
           </div>
         </div>
       </div>
 
-      <!-- 6. Bride portrait -->
-      <div class="hero-slide" style="background-image: url('images/bride/bride-3.jpg');">
+      <div class="hero-slide bride" data-bg="images/bride/bride-3">
         <div class="hero-slide-overlay"></div>
         <div class="hero-slide-content hero-slide-content-right">
           <span class="hero-brand-mark">Radiance</span>
           <p class="hero-eyebrow">A Legacy in Light</p>
-          <h1 class="hero-title">Diamonds <em>Worn</em></h1>
+          <h2 class="hero-title">Diamonds <em>Worn</em></h2>
           <p class="hero-tagline">She doesn't just wear jewellery — she carries the light of generations before her.</p>
           <div class="hero-actions">
-            <a href="#explore" class="btn-cinema btn-cinema-primary">View Diamond Sets</a>
-            <a href="#contact" class="btn-cinema btn-cinema-ghost">Visit Store</a>
+            <a href="#explore" class="btn-cinema btn-cinema-primary">View Diamond Pieces</a>
+            <a href="#visit" class="btn-cinema btn-cinema-ghost">Visit Store</a>
           </div>
         </div>
       </div>
 
-      <!-- 7. Heritage gold product -->
-      <div class="hero-slide" style="background-image: url('images/hero/hero-4.jpg');">
+      <div class="hero-slide" data-bg="images/hero/hero-4">
         <div class="hero-slide-overlay"></div>
         <div class="hero-slide-content">
           <span class="hero-brand-mark">Chandu Jewellers</span>
           <p class="hero-eyebrow">Heritage Gold</p>
-          <h1 class="hero-title">Pure. <em>Timeless.</em></h1>
-          <p class="hero-tagline">BIS-hallmarked 22kt gold, handcrafted by master artisans in the Karimnagar tradition.</p>
+          <h2 class="hero-title">Pure. <em>Timeless.</em></h2>
+          <p class="hero-tagline">BIS-hallmarked 22kt gold with a HUID on every piece — handcrafted in the Karimnagar tradition.</p>
           <div class="hero-actions">
-            <a href="#categories" class="btn-cinema btn-cinema-primary">Explore Gold</a>
-            <a href="#contact" class="btn-cinema btn-cinema-ghost">Visit Store</a>
+            <a href="#categories" class="btn-cinema btn-cinema-primary">Shop by Category</a>
+            <a href="#guide" class="btn-cinema btn-cinema-ghost">What is HUID?</a>
           </div>
         </div>
       </div>
 
-      <!-- 8. Bride finale -->
-      <div class="hero-slide" style="background-image: url('images/bride/bride-4.jpg');">
+      <div class="hero-slide bride" data-bg="images/bride/bride-4">
         <div class="hero-slide-overlay"></div>
         <div class="hero-slide-content hero-slide-content-right">
           <span class="hero-brand-mark">Heirloom</span>
           <p class="hero-eyebrow">Passed Down. Worn Forward.</p>
-          <h1 class="hero-title">A Legacy <em>in Gold</em></h1>
-          <p class="hero-tagline">Three generations of trust. Endless moments to celebrate. Begin yours at Chandu Jewellers.</p>
+          <h2 class="hero-title">A Legacy <em>in Gold</em></h2>
+          <p class="hero-tagline">Decades of trust. Endless moments to celebrate. Begin yours at Chandu Jewellers.</p>
           <div class="hero-actions">
-            <a href="#about" class="btn-cinema btn-cinema-primary">Our Story</a>
-            <a href="#contact" class="btn-cinema btn-cinema-ghost">Visit Karimnagar</a>
+            <a href="#rates" class="btn-cinema btn-cinema-primary">Exchange Old Gold</a>
+            <a href="#visit" class="btn-cinema btn-cinema-ghost">Visit Karimnagar</a>
           </div>
         </div>
       </div>
 
-      <!-- 9. Bride — closing portrait -->
-      <div class="hero-slide" style="background-image: url('images/bride/bride-5.jpg');">
+      <div class="hero-slide bride" data-bg="images/bride/bride-5">
         <div class="hero-slide-overlay"></div>
         <div class="hero-slide-content hero-slide-content-right">
           <span class="hero-brand-mark">Forever</span>
           <p class="hero-eyebrow">The Wedding Day</p>
-          <h1 class="hero-title">Yours, <em>Always</em></h1>
+          <h2 class="hero-title">Yours, <em>Always</em></h2>
           <p class="hero-tagline">For the day you walk in tradition, and every quiet morning after — Chandu Jewellers stays with you.</p>
           <div class="hero-actions">
-            <a href="#explore" class="btn-cinema btn-cinema-primary">Begin Your Story</a>
-            <a href="#contact" class="btn-cinema btn-cinema-ghost">Visit Us</a>
+            <a href="#appointment" class="btn-cinema btn-cinema-primary">Begin Your Story</a>
+            <a href="#visit" class="btn-cinema btn-cinema-ghost">Visit Us</a>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Slide indicators (dots) -->
-    <div class="hero-dots" role="tablist" aria-label="Hero slides">
-      <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
-      <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
-      <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
-      <button class="hero-dot" data-slide="3" aria-label="Slide 4"></button>
-      <button class="hero-dot" data-slide="4" aria-label="Slide 5"></button>
-      <button class="hero-dot" data-slide="5" aria-label="Slide 6"></button>
-      <button class="hero-dot" data-slide="6" aria-label="Slide 7"></button>
-      <button class="hero-dot" data-slide="7" aria-label="Slide 8"></button>
-      <button class="hero-dot" data-slide="8" aria-label="Slide 9"></button>
-    </div>
-
-    <!-- Slide arrows -->
+    <div class="hero-dots" role="tablist" aria-label="Choose slide"></div>
     <button class="hero-arrow hero-arrow-prev" aria-label="Previous slide">‹</button>
     <button class="hero-arrow hero-arrow-next" aria-label="Next slide">›</button>
+    <div class="hero-progress"><span></span></div>
 
-    <!-- Subtle scroll cue -->
     <div class="hero-scroll-cue">
       <span>Scroll to discover</span>
       <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- Marquee announcement strip -->
-  <div class="marquee-strip">
+  <!-- Marquee -->
+  <div class="marquee-strip" aria-hidden="true">
     <div class="marquee-track">
-      <span>✦ BIS-Hallmarked Gold</span>
+      <span>✦ BIS-Hallmarked Gold with HUID</span>
       <span>✦ Certified Diamonds</span>
-      <span>✦ Lifetime Exchange</span>
+      <span>✦ Old Gold Exchange</span>
       <span>✦ Custom Bridal Sets</span>
       <span>✦ Karimnagar's Trusted Jeweller Since 1996</span>
       <span>✦ Free Cleaning &amp; Polishing</span>
-      <span>✦ BIS-Hallmarked Gold</span>
+      <span>✦ BIS-Hallmarked Gold with HUID</span>
       <span>✦ Certified Diamonds</span>
-      <span>✦ Lifetime Exchange</span>
+      <span>✦ Old Gold Exchange</span>
       <span>✦ Custom Bridal Sets</span>
       <span>✦ Karimnagar's Trusted Jeweller Since 1996</span>
       <span>✦ Free Cleaning &amp; Polishing</span>
     </div>
   </div>
+
+  <!-- Trust stats -->
+  <section class="stats" aria-label="At a glance">
+    <div class="container stats-grid">
+      <div class="stat" data-reveal><span class="stat-num" data-count-from="1996">30</span><span class="stat-plus">+</span><span class="stat-label">Years of trust</span></div>
+      <div class="stat" data-reveal data-reveal-delay="1"><span class="stat-num">100</span><span class="stat-plus">%</span><span class="stat-label">BIS-hallmarked gold</span></div>
+      <div class="stat" data-reveal data-reveal-delay="2"><span class="stat-num">HUID</span><span class="stat-label">6-digit ID on every piece</span></div>
+      <div class="stat" data-reveal data-reveal-delay="3"><span class="stat-num">1:1</span><span class="stat-label">Personal bridal consultation</span></div>
+    </div>
+  </section>
 
   <!-- Shop by Category -->
   <section id="categories" class="categories">
@@ -241,158 +283,148 @@
       <div class="we-provide-header" data-reveal>
         <p class="section-label">Shop by Category</p>
         <h2 class="section-title we-provide-title">We Provide</h2>
-        <p class="we-provide-desc">Click any category to view all pieces in that collection</p>
+        <p class="we-provide-desc">Pick a category to see every piece in it</p>
       </div>
-      <div class="category-showcase">
-        <a href="#explore" class="cat-card" data-category="rings" data-reveal data-reveal-delay="0">
-          <div class="cat-card-img">
-            <img src="images/categories/rings.jpg" alt="Gold Rings" loading="lazy">
-          </div>
-          <div class="cat-card-label">Gold <strong>Rings</strong></div>
-        </a>
-        <a href="#explore" class="cat-card" data-category="earrings" data-reveal data-reveal-delay="1">
-          <div class="cat-card-img">
-            <img src="images/categories/earrings.jpg" alt="Gold Earrings" loading="lazy">
-          </div>
-          <div class="cat-card-label">Gold <strong>Earrings</strong></div>
-        </a>
-        <a href="#explore" class="cat-card" data-category="necklaces" data-reveal data-reveal-delay="2">
-          <div class="cat-card-img">
-            <img src="images/categories/necklaces.jpg" alt="Gold Necklaces" loading="lazy">
-          </div>
-          <div class="cat-card-label">Gold <strong>Necklaces</strong></div>
-        </a>
-        <a href="#explore" class="cat-card" data-category="bangles" data-reveal data-reveal-delay="3">
-          <div class="cat-card-img">
-            <img src="images/categories/bangles.jpg" alt="Gold Bangles" loading="lazy">
-          </div>
-          <div class="cat-card-label">Gold <strong>Bangles</strong></div>
-        </a>
-        <a href="#explore" class="cat-card" data-category="mangalsutras" data-reveal data-reveal-delay="4">
-          <div class="cat-card-img">
-            <img src="images/categories/mangalsutras.jpg" alt="Mangalsutra" loading="lazy">
-          </div>
-          <div class="cat-card-label"><strong>Mangalsutra</strong></div>
-        </a>
-        <a href="#explore" class="cat-card" data-category="chains" data-reveal data-reveal-delay="5">
-          <div class="cat-card-img">
-            <img src="images/categories/chains.jpg" alt="Gold Chains" loading="lazy">
-          </div>
-          <div class="cat-card-label">Gold <strong>Chains</strong></div>
-        </a>
-        <a href="#explore" class="cat-card" data-category="harams" data-reveal data-reveal-delay="6">
-          <div class="cat-card-img">
-            <img src="images/categories/harams.jpg" alt="Harams" loading="lazy">
-          </div>
-          <div class="cat-card-label">Gold <strong>Harams</strong></div>
-        </a>
-      </div>
+      <div class="category-showcase" id="categoryShowcase"><!-- built from data.js --></div>
     </div>
   </section>
 
-  <!-- Featured Items -->
+  <!-- Featured -->
   <section id="featured" class="featured">
     <div class="container">
       <div class="featured-header" data-reveal>
-        <p class="section-label">Featured Items</p>
+        <p class="section-label">Featured</p>
         <h2 class="section-title">Trending Now</h2>
-        <p class="featured-desc">Discover our most popular pieces – scroll horizontally to explore</p>
+        <p class="featured-desc">Our most-asked-about pieces. Tap any one for details.</p>
       </div>
       <div class="featured-wrapper">
         <button class="scroll-btn scroll-left" aria-label="Scroll left">‹</button>
-        <div class="featured-carousel">
-          <div class="item-card" data-reveal data-reveal-delay="0">
-            <div class="item-card-img">
-              <img src="images/featured/item-1.jpg" alt="Gold Solitaire Ring" loading="lazy">
-            </div>
-            <div class="item-card-label">Gold Solitaire Ring</div>
-            <div class="item-card-price">On request</div>
-          </div>
-          <div class="item-card" data-reveal data-reveal-delay="1">
-            <div class="item-card-img">
-              <img src="images/featured/item-2.jpg" alt="Diamond Cocktail Ring" loading="lazy">
-            </div>
-            <div class="item-card-label">Diamond Cocktail Ring</div>
-            <div class="item-card-price">On request</div>
-          </div>
-          <div class="item-card" data-reveal data-reveal-delay="2">
-            <div class="item-card-img">
-              <img src="images/featured/item-3.jpg" alt="Gold Jhumka Earrings" loading="lazy">
-            </div>
-            <div class="item-card-label">Gold Jhumka Earrings</div>
-            <div class="item-card-price">On request</div>
-          </div>
-          <div class="item-card" data-reveal data-reveal-delay="3">
-            <div class="item-card-img">
-              <img src="images/featured/item-4.jpg" alt="Diamond Stud Earrings" loading="lazy">
-            </div>
-            <div class="item-card-label">Diamond Stud Earrings</div>
-            <div class="item-card-price">On request</div>
-          </div>
-          <div class="item-card" data-reveal data-reveal-delay="4">
-            <div class="item-card-img">
-              <img src="images/featured/item-5.jpg" alt="Gold Chain Necklace" loading="lazy">
-            </div>
-            <div class="item-card-label">Gold Chain Necklace</div>
-            <div class="item-card-price">On request</div>
-          </div>
-          <div class="item-card" data-reveal data-reveal-delay="5">
-            <div class="item-card-img">
-              <img src="images/featured/item-6.jpg" alt="Rope Chain" loading="lazy">
-            </div>
-            <div class="item-card-label">Rope Chain</div>
-            <div class="item-card-price">On request</div>
-          </div>
-          <div class="item-card" data-reveal data-reveal-delay="6">
-            <div class="item-card-img">
-              <img src="images/featured/item-7.jpg" alt="Gold Necklace" loading="lazy">
-            </div>
-            <div class="item-card-label">Gold Necklace</div>
-            <div class="item-card-price">On request</div>
-          </div>
-          <div class="item-card" data-reveal data-reveal-delay="7">
-            <div class="item-card-img">
-              <img src="images/featured/item-8.jpg" alt="Gold Bangles" loading="lazy">
-            </div>
-            <div class="item-card-label">Gold Bangles</div>
-            <div class="item-card-price">On request</div>
-          </div>
-          <div class="item-card" data-reveal data-reveal-delay="8">
-            <div class="item-card-img">
-              <img src="images/featured/item-9.jpg" alt="Mangalsutra" loading="lazy">
-            </div>
-            <div class="item-card-label">Mangalsutra</div>
-            <div class="item-card-price">On request</div>
-          </div>
-        </div>
+        <div class="featured-carousel" id="featuredCarousel"><!-- built from data.js --></div>
         <button class="scroll-btn scroll-right" aria-label="Scroll right">›</button>
       </div>
     </div>
   </section>
 
-  <!-- Explore Jewellery -->
+  <!-- Explore / catalogue -->
   <section id="explore" class="explore">
     <div class="container">
       <p class="section-label" data-reveal>Explore Jewellery</p>
       <h2 class="section-title" data-reveal>Our Collection</h2>
-      <p class="section-desc" data-reveal>Handpicked pieces for you. We'll add more designs soon – visit our store in Karimnagar for the full range.</p>
+      <p class="section-desc" data-reveal>A glimpse of what's in store. Tap ♡ to save pieces, then send your shortlist to us on WhatsApp — we'll have them ready when you visit.</p>
 
-      <div class="filter-tabs reveal">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="rings">Rings</button>
-        <button class="filter-btn" data-filter="chains">Chains</button>
-        <button class="filter-btn" data-filter="necklaces">Necklaces</button>
-        <button class="filter-btn" data-filter="harams">Harams</button>
-        <button class="filter-btn" data-filter="bangles">Bangles</button>
-        <button class="filter-btn" data-filter="mangalsutras">Mangalsutras</button>
-        <button class="filter-btn" data-filter="earrings">Earrings</button>
+      <div class="catalog-tools">
+        <label class="search-field">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input type="search" id="catalogSearch" placeholder="Search: bridal, diamond, earrings…" autocomplete="off" aria-label="Search the collection">
+        </label>
+        <select id="catalogSort" aria-label="Sort">
+          <option value="featured">Featured first</option>
+          <option value="name">Name A–Z</option>
+          <option value="category">Category</option>
+        </select>
       </div>
 
+      <div class="filter-tabs" id="filterTabs" role="toolbar" aria-label="Filter by category"><!-- built from data.js --></div>
       <div id="categoryViewHeading" class="category-view-heading" aria-live="polite">All pieces</div>
-
-      <div class="jewelery-grid" id="jeweleryGrid">
-        <!-- Filled by JS from data -->
+      <div class="jewelery-grid" id="jeweleryGrid"></div>
+      <div class="empty-state" id="emptyState" hidden>
+        <p>Nothing matches that yet — our store has far more than we can show online.</p>
+        <a class="btn btn-primary" id="emptyAsk" target="_blank" rel="noopener">Ask us on WhatsApp</a>
       </div>
+    </div>
+  </section>
+
+  <!-- Gold rate + calculators -->
+  <section id="rates" class="rates">
+    <div class="container">
+      <div class="rates-head" data-reveal>
+        <p class="section-label">Transparent Pricing</p>
+        <h2 class="section-title">Today's Rate &amp; Price Estimator</h2>
+        <p class="section-desc">See exactly how a price is built — metal value, making charges and GST. No surprises at the counter.</p>
+      </div>
+
+      <div class="rate-board" id="rateBoard" data-reveal><!-- filled by JS --></div>
+
+      <div class="calc" data-reveal>
+        <div class="calc-tabs" role="tablist">
+          <button class="calc-tab active" role="tab" aria-selected="true" data-calc="buy">Price estimator</button>
+          <button class="calc-tab" role="tab" aria-selected="false" data-calc="exchange">Old gold value</button>
+        </div>
+
+        <form class="calc-body" id="calcForm" autocomplete="off" onsubmit="return false">
+          <div class="calc-fields">
+            <label>Purity
+              <select name="purity">
+                <option value="22">22K (916)</option>
+                <option value="18">18K (750)</option>
+                <option value="24">24K (999)</option>
+              </select>
+            </label>
+            <label>Weight (grams)
+              <input type="number" name="weight" min="0" step="0.01" value="10" inputmode="decimal">
+            </label>
+            <label>Rate (₹ / gram)
+              <input type="number" name="rate" min="0" step="1" placeholder="Enter today's rate" inputmode="numeric">
+            </label>
+            <label class="calc-buy-only">Making charges (%)
+              <input type="number" name="making" min="0" max="40" step="0.5" value="12" inputmode="decimal">
+            </label>
+            <label class="calc-ex-only" hidden>Tested purity (%)
+              <input type="number" name="tested" min="0" max="100" step="0.1" value="91.6" inputmode="decimal">
+            </label>
+          </div>
+          <div class="calc-result" id="calcResult" aria-live="polite"></div>
+        </form>
+        <p class="calc-note" id="calcNote">Estimates only. Final price depends on the exact weight, design, stones and the rate on the day of purchase. Old gold is tested in front of you before any value is agreed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Appointment -->
+  <section id="appointment" class="appointment">
+    <div class="container appointment-inner">
+      <div class="appointment-copy" data-reveal>
+        <p class="section-label">Personal Service</p>
+        <h2 class="section-title">Book a Store Visit</h2>
+        <p>Tell us when you're coming and what you're looking for. We'll set aside time — and pieces — just for you.</p>
+        <ul class="appointment-perks">
+          <li><span>✦</span> Bridal consultations for the full trousseau</li>
+          <li><span>✦</span> Custom designs from your ideas or photos</li>
+          <li><span>✦</span> Old gold tested and valued in front of you</li>
+          <li><span>✦</span> Can't come in? Ask for a WhatsApp video call</li>
+        </ul>
+      </div>
+      <form class="appointment-form" id="appointmentForm" data-reveal novalidate>
+        <div class="form-row">
+          <label>Your name<input name="name" required autocomplete="name"></label>
+          <label>Phone<input name="phone" type="tel" required autocomplete="tel" inputmode="tel" pattern="[0-9+ ]{10,15}"></label>
+        </div>
+        <div class="form-row">
+          <label>Date<input name="date" type="date" required></label>
+          <label>Time
+            <select name="time">
+              <option>Morning (10 – 1)</option>
+              <option>Afternoon (1 – 5)</option>
+              <option>Evening (5 – 9)</option>
+            </select>
+          </label>
+        </div>
+        <fieldset class="chip-group">
+          <legend>I'm interested in</legend>
+          <label><input type="radio" name="purpose" value="Bridal jewellery" checked><span>Bridal</span></label>
+          <label><input type="radio" name="purpose" value="Custom design"><span>Custom design</span></label>
+          <label><input type="radio" name="purpose" value="Old gold exchange"><span>Old gold exchange</span></label>
+          <label><input type="radio" name="purpose" value="Diamonds"><span>Diamonds</span></label>
+          <label><input type="radio" name="purpose" value="WhatsApp video call"><span>Video call</span></label>
+          <label><input type="radio" name="purpose" value="Just browsing"><span>Just browsing</span></label>
+        </fieldset>
+        <label>Anything else? <textarea name="notes" rows="2" placeholder="Budget, occasion, pieces you liked…"></textarea></label>
+        <button type="submit" class="btn btn-primary btn-wa">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3z"/></svg>
+          Confirm on WhatsApp
+        </button>
+        <p class="form-hint">This opens WhatsApp with your details filled in — just press send.</p>
+      </form>
     </div>
   </section>
 
@@ -405,23 +437,74 @@
         <div class="why-card" data-reveal data-reveal-delay="0">
           <span class="why-icon">✓</span>
           <h3>Pure gold</h3>
-          <p>BIS-hallmarked, transparent pricing</p>
+          <p>BIS-hallmarked with HUID, and pricing that's broken down for you</p>
         </div>
         <div class="why-card" data-reveal data-reveal-delay="1">
           <span class="why-icon">💎</span>
           <h3>Certified diamonds</h3>
-          <p>Quality assured stones</p>
+          <p>Quality-assured stones you can verify</p>
         </div>
         <div class="why-card" data-reveal data-reveal-delay="2">
           <span class="why-icon">🏪</span>
           <h3>Store in Karimnagar</h3>
-          <p>Visit us for a personal experience</p>
+          <p>Personal service from a family business</p>
         </div>
         <div class="why-card" data-reveal data-reveal-delay="3">
           <span class="why-icon">🔄</span>
-          <h3>Exchange & buyback</h3>
-          <p>Fair policies on your old gold</p>
+          <h3>Exchange &amp; buyback</h3>
+          <p>Fair, tested value for your old gold</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gold guide -->
+  <section id="guide" class="guide">
+    <div class="container">
+      <div class="guide-head" data-reveal>
+        <p class="section-label">Buy With Confidence</p>
+        <h2 class="section-title">The Gold Guide</h2>
+        <p class="section-desc">What every buyer in India should know before they buy gold.</p>
+      </div>
+      <div class="guide-grid">
+        <article class="guide-card" data-reveal>
+          <span class="guide-num">01</span>
+          <h3>Look for the hallmark</h3>
+          <p>Since 2021, gold jewellery sold in India must carry a BIS hallmark with three marks: the <strong>BIS logo</strong>, the <strong>purity</strong> (e.g. 22K916) and a <strong>6-character HUID</strong> that's unique to that piece.</p>
+          <p class="guide-tip">Tip: type the HUID into the government's <strong>BIS CARE</strong> app to verify it yourself.</p>
+        </article>
+        <article class="guide-card" data-reveal data-reveal-delay="1">
+          <span class="guide-num">02</span>
+          <h3>Know your karats</h3>
+          <table class="karat-table">
+            <thead><tr><th>Karat</th><th>Mark</th><th>Gold</th><th>Best for</th></tr></thead>
+            <tbody>
+              <tr><td>24K</td><td>999</td><td>99.9%</td><td>Coins &amp; bars</td></tr>
+              <tr><td>22K</td><td>916</td><td>91.6%</td><td>Traditional &amp; bridal</td></tr>
+              <tr><td>18K</td><td>750</td><td>75.0%</td><td>Diamond &amp; gemstone</td></tr>
+              <tr><td>14K</td><td>585</td><td>58.5%</td><td>Light daily wear</td></tr>
+            </tbody>
+          </table>
+        </article>
+        <article class="guide-card" data-reveal data-reveal-delay="2">
+          <span class="guide-num">03</span>
+          <h3>How the price is made</h3>
+          <div class="formula">
+            <span>Gold rate × weight</span><b>+</b><span>Making charges</span><b>+</b><span>Stones (if any)</span><b>+</b><span>3% GST</span>
+          </div>
+          <p>Making charges cover the craftsmanship — intricate handwork costs more than plain machine-made pieces. Ask for the bill to show each part separately.</p>
+          <a href="#rates" class="text-link">Try the price estimator →</a>
+        </article>
+        <article class="guide-card" data-reveal data-reveal-delay="3">
+          <span class="guide-num">04</span>
+          <h3>Caring for your jewellery</h3>
+          <ul class="care-list">
+            <li>Put jewellery on last — after perfume, lotion and hairspray.</li>
+            <li>Store pieces separately in soft cloth so they don't scratch.</li>
+            <li>Take it off for swimming, the gym and housework.</li>
+            <li>Bring it in for a professional clean and check — it's on us.</li>
+          </ul>
+        </article>
       </div>
     </div>
   </section>
@@ -432,23 +515,81 @@
       <div class="about-text" data-reveal>
         <p class="section-label">About Us</p>
         <h2 class="section-title"><strong class="brand-name-highlight">Chandu Jewellers</strong>, Karimnagar</h2>
-        <p>We bring you a wide range of gold and diamond jewellery – rings, chains, necklaces, harams, bangles, mangalsutras and more. Each piece is chosen with care so you can celebrate every occasion with elegance.</p>
-        <p>Visit our store in Karimnagar to explore our full collection and get expert advice. You can start by browsing our featured pieces here; we'll keep adding more designs for you.</p>
+        <p>Since 1996, families in Karimnagar have trusted us with their most important moments — weddings, festivals, first gifts and heirlooms passed down. We bring you gold and diamond jewellery: rings, chains, necklaces, harams, bangles, mangalsutras and more.</p>
+        <p>What you see here is a small glimpse. Visit our store to see the full collection and get honest advice — or send us a WhatsApp and we'll show you pieces on a video call.</p>
+        <div class="about-actions">
+          <a href="#visit" class="btn btn-primary">Visit the Store</a>
+          <a href="#" class="btn btn-outline" data-wa="Hi, I'd like to see some pieces on a video call.">Video-call shopping</a>
+        </div>
       </div>
       <div class="about-visual" data-reveal>
         <div class="about-frame">
+          <img src="images/logo.webp" alt="" class="about-logo" loading="lazy">
           <div class="about-shimmer"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Visit -->
+  <section id="visit" class="visit">
+    <div class="container visit-inner">
+      <div class="visit-info" data-reveal>
+        <p class="section-label">Visit Us</p>
+        <h2 class="section-title">Our Karimnagar Store</h2>
+        <address class="visit-address" id="visitAddress">Karimnagar, Telangana</address>
+        <ul class="visit-hours" id="visitHours"></ul>
+        <div class="visit-actions">
+          <a class="btn btn-primary" id="directionsBtn" target="_blank" rel="noopener">Get Directions</a>
+          <a class="btn btn-outline" href="tel:+917981233951" data-tel>Call Us</a>
+          <a class="btn btn-outline" id="reviewsBtn" target="_blank" rel="noopener" hidden>★ Google Reviews</a>
+        </div>
+      </div>
+      <div class="visit-map" data-reveal>
+        <iframe id="mapFrame" title="Map to Chandu Jewellers" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-src=""></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="container faq-inner">
+      <div data-reveal>
+        <p class="section-label">Questions</p>
+        <h2 class="section-title">Frequently Asked</h2>
+      </div>
+      <div class="faq-list" data-reveal>
+        <details>
+          <summary>Is your gold hallmarked?</summary>
+          <p>Yes. Our gold jewellery is BIS-hallmarked and carries a 6-character HUID that you can verify on the BIS CARE app.</p>
+        </details>
+        <details>
+          <summary>Can I exchange my old gold?</summary>
+          <p>Yes. We test your old gold in front of you, agree its value at the day's rate, and adjust it against your new purchase. Use the <a href="#rates">old gold estimator</a> for a rough idea before you come.</p>
+        </details>
+        <details>
+          <summary>Do you make custom or bridal designs?</summary>
+          <p>Yes — bring a photo or idea and we'll work with you on the design, weight and budget. <a href="#appointment">Book a consultation</a> so we can set aside time.</p>
+        </details>
+        <details>
+          <summary>Why don't you show prices online?</summary>
+          <p>Gold prices change every day and every piece has a slightly different weight. Send us a WhatsApp with the piece you like and we'll reply with today's exact price.</p>
+        </details>
+        <details>
+          <summary>Can I see jewellery without visiting?</summary>
+          <p>Yes. Message us on WhatsApp and we'll show you pieces on a video call.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
   <footer id="contact" class="footer">
     <div class="container">
-      <div class="footer-grid reveal">
+      <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#" class="logo"><img src="images/logo.jpeg" alt="Chandu Jewellers Logo" class="logo-img"></a>
+          <a href="#home" class="logo"><img src="images/icon-192.png" alt="Chandu Jewellers" class="logo-img" width="56" height="56" loading="lazy"></a>
           <p>Karimnagar's trusted name in gold and diamond jewellery since 1996.</p>
           <p class="footer-place">📍 Karimnagar</p>
           <div class="footer-social">
@@ -463,48 +604,106 @@
           </div>
         </div>
         <div class="footer-links">
-          <h4>Quick Links</h4>
-          <a href="#home">Home</a>
-          <a href="#explore">Explore Jewellery</a>
-          <a href="#categories">Shop by Category</a>
-          <a href="#about">About</a>
+          <h4>Explore</h4>
+          <a href="#explore">Collection</a>
+          <a href="#rates">Gold Rate &amp; Estimator</a>
+          <a href="#appointment">Book a Visit</a>
+          <a href="#guide">Gold Guide</a>
+          <a href="#faq">FAQ</a>
         </div>
         <div class="footer-contact">
           <h4>Contact</h4>
-          <p class="footer-phone-link" id="openContactForm">📞 79812 33951</p>
+          <p><a class="footer-phone-link" href="tel:+917981233951" data-tel>📞 79812 33951</a></p>
+          <p><button type="button" class="footer-phone-link link-btn" id="openContactForm">💬 Send us a message</button></p>
           <p>Visit our store in Karimnagar</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© <strong class="brand-name-highlight">Chandu Jewellers</strong>, Karimnagar. All rights reserved.</p>
+        <p>© <span id="year">2026</span> Chandu Jewellers, Karimnagar. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <!-- Contact Form Modal -->
-  <div class="modal-overlay" id="contactModal">
-    <div class="modal">
-      <button class="modal-close" id="closeContactForm" aria-label="Close">&times;</button>
-      <h3 class="modal-title">Get in Touch</h3>
+  <!-- Quick view -->
+  <div class="modal-overlay" id="quickView" aria-hidden="true">
+    <div class="modal qv" role="dialog" aria-modal="true" aria-labelledby="qvTitle">
+      <button class="modal-close" data-close aria-label="Close">&times;</button>
+      <div class="qv-media">
+        <div class="qv-zoom" id="qvZoom"><img id="qvImg" alt=""></div>
+        <p class="qv-zoom-hint">Hover or tap to zoom</p>
+      </div>
+      <div class="qv-info">
+        <p class="qv-cat" id="qvCat"></p>
+        <h3 class="modal-title" id="qvTitle"></h3>
+        <p class="qv-metal" id="qvMetal"></p>
+        <p class="qv-desc" id="qvDesc"></p>
+        <p class="qv-price">Price: <strong>on request</strong> <span>— varies with today's rate and exact weight</span></p>
+        <div class="qv-actions">
+          <a class="btn btn-primary btn-wa" id="qvEnquire" target="_blank" rel="noopener">Ask price on WhatsApp</a>
+          <button class="btn btn-outline" id="qvWish">♡ Save</button>
+          <button class="btn btn-outline" id="qvShare">Share</button>
+        </div>
+        <ul class="qv-assure">
+          <li>✓ BIS-hallmarked with HUID</li>
+          <li>✓ Can be customised in store</li>
+          <li>✓ Old gold exchange accepted</li>
+        </ul>
+        <div class="qv-nav">
+          <button id="qvPrev" aria-label="Previous piece">‹ Previous</button>
+          <button id="qvNext" aria-label="Next piece">Next ›</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wishlist drawer -->
+  <div class="drawer-overlay" id="wishlistDrawer" aria-hidden="true">
+    <aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="wishTitle">
+      <div class="drawer-head">
+        <h3 id="wishTitle">Your Wishlist</h3>
+        <button class="modal-close" data-close aria-label="Close">&times;</button>
+      </div>
+      <ul class="wish-list" id="wishList"></ul>
+      <div class="drawer-foot">
+        <a class="btn btn-primary btn-wa" id="wishSend" target="_blank" rel="noopener">Send list on WhatsApp</a>
+        <p class="form-hint">We'll reply with today's prices and keep these ready for your visit.</p>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Contact modal -->
+  <div class="modal-overlay" id="contactModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+      <button class="modal-close" data-close aria-label="Close">&times;</button>
+      <h3 class="modal-title" id="contactTitle">Get in Touch</h3>
       <p class="modal-desc">Fill in your details and we'll reach out to you</p>
       <form class="contact-form" id="contactForm">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="tel" name="phone" placeholder="Your Phone Number" required>
+        <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
+        <input type="tel" name="phone" placeholder="Your Phone Number" required autocomplete="tel">
         <textarea name="message" placeholder="Your Message (optional)" rows="3"></textarea>
         <button type="submit" class="btn btn-primary contact-submit">Send via WhatsApp</button>
       </form>
     </div>
   </div>
 
-  <!-- Back to top -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
   <button class="back-to-top" id="backToTop" aria-label="Back to top">
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 3L3 12h4.5v5h5v-5H17L10 3z" fill="currentColor"/></svg>
   </button>
 
-  <!-- WhatsApp floating button -->
-  <a href="https://wa.me/917981233951?text=Hi%2C%20I%27m%20interested%20in%20your%20jewellery%20collection" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <a href="#" data-wa="Hi, I'm interested in your jewellery collection" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
     <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
+
+  <!-- Mobile action bar -->
+  <nav class="mobile-bar" aria-label="Quick actions">
+    <a href="tel:+917981233951" data-tel><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+    <a href="#" data-wa="Hi, I'm interested in your jewellery collection" target="_blank" rel="noopener" class="mb-wa"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.3-1.8-1-.9.7a4 4 0 0 1-2.2-2.2l.7-.9-1-1.8z"/></svg>WhatsApp</a>
+    <a href="#appointment"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="1.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg>Book</a>
+    <a href="#rates"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M14.8 8.5H9.2M14.8 11.5H9.2M9.8 8.5c3.8 0 3.8 3 0 3l4.4 4"/></svg>Rate</a>
+    <button type="button" data-open-wishlist><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.2 3 4.5 6.6 4.5c2.1 0 3.5 1.2 4.4 2.6.9-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.7 3.8 6.9C19 15.6 12 20 12 20z"/></svg>Saved<b class="badge" hidden>0</b></button>
+  </nav>
 
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
