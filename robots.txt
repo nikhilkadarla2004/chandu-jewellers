@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://chandujewellers.in/sitemap.xml
+Sitemap: https://nikhilkadarla2004.github.io/chandu-jewellers/sitemap.xml
